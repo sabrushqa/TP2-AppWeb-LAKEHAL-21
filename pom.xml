@@ -14,22 +14,26 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.target>21</maven.compiler.target>
         <maven.compiler.source>21</maven.compiler.source>
-        <junit.version>5.11.0</junit.version>
+
+        <jakartaee.version>10.0.0</jakartaee.version>
+        <primefaces.version>14.0.0</primefaces.version>
         <langchain4j.version>1.8.0</langchain4j.version>
+        <junit.version>5.11.0</junit.version>
     </properties>
 
     <dependencies>
+
         <dependency>
             <groupId>jakarta.platform</groupId>
             <artifactId>jakarta.jakartaee-web-api</artifactId>
-            <version>10.0.0</version>
+            <version>${jakartaee.version}</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
-            <version>14.0.0</version>
+            <version>${primefaces.version}</version>
             <classifier>jakarta</classifier>
         </dependency>
 
@@ -38,7 +42,6 @@
             <artifactId>langchain4j</artifactId>
             <version>${langchain4j.version}</version>
         </dependency>
-
         <dependency>
             <groupId>dev.langchain4j</groupId>
             <artifactId>langchain4j-google-ai-gemini</artifactId>
